@@ -14,11 +14,38 @@ router.post('/register', (req, res, next) => {
         password: req.body.password
     });
 
-    User.addUser(newUser, (err, user) => {
-        if(err){
-            res.json({success: false, msg:'Failed to register user'});
-        } else {
-            res.json({success: true, msg:'User registered'});
+    // Check if a user with that email is already registered
+    User.getUserByEmail(newUser.email, (error, user)=>{
+
+        // Throw error if any
+        if(error) throw error;
+
+        console.log('user email is '+newUser.email);
+        // email not found
+        if(!user){
+            console.log('New user');
+            User.addUser(newUser, (err, user)=>{
+                if(err){
+                    res.json({
+                        success: false,
+                        message: 'Failed to register user'
+                    });
+                }
+                else{
+                    res.json({
+                        success: true,
+                        message: 'User successfully registered'
+                    });
+                }
+            });
+        }
+        // email is found - user already exists
+        else{
+            console.log('This email already exists');
+            res.json({
+                success: false,
+                message: 'Email already in use'
+            });
         }
     });
 });

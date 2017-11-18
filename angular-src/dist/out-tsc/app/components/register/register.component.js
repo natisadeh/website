@@ -46,7 +46,7 @@ var RegisterComponent = /** @class */ (function () {
                 _this.router.navigate(['/login']);
             }
             else {
-                _this.flashMessage.show('Something went wrong', { cssClass: 'alert-danger', timeout: 3000 });
+                _this.flashMessage.show('Username or Email is already exist', { cssClass: 'alert-danger', timeout: 3000 });
                 _this.router.navigate(['/register']);
             }
         });
