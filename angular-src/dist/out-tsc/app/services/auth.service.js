@@ -14,12 +14,13 @@ import { tokenNotExpired } from "angular2-jwt";
 var AuthService = /** @class */ (function () {
     function AuthService(http) {
         this.http = http;
+        this.NAME_KEY = 'name';
     }
     AuthService.prototype.registerUser = function (user) {
         var headers = new Headers();
         headers.append('Content-Type', 'application/json');
         return this.http.post('http://localhost:3000/users/register', user, { headers: headers })
-            .map(function (res) { return res.json(); });
+            .map(function (res) { return res.json().lo; });
     };
     AuthService.prototype.authenticateUser = function (user) {
         var headers = new Headers();
@@ -35,14 +36,19 @@ var AuthService = /** @class */ (function () {
         return this.http.get('http://localhost:3000/users/profile', { headers: headers })
             .map(function (res) { return res.json(); });
     };
+    Object.defineProperty(AuthService.prototype, "name", {
+        get: function () {
+            // return localStorage.getItem(this.NAME_KEY).toString();
+            return JSON.parse(localStorage.getItem(this.NAME_KEY));
+        },
+        enumerable: true,
+        configurable: true
+    });
     AuthService.prototype.storeUserData = function (token, user) {
         localStorage.setItem('id_token', token);
         localStorage.setItem('user', JSON.stringify(user));
+        localStorage.setItem(this.NAME_KEY, JSON.stringify(user.name));
         this.authToken = token;
-        this.user = user;
-    };
-    AuthService.prototype.loadUser = function () {
-        var user = localStorage.getItem('user');
         this.user = user;
     };
     AuthService.prototype.loadToken = function () {
