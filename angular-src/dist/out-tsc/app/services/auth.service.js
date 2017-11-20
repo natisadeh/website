@@ -41,6 +41,10 @@ var AuthService = /** @class */ (function () {
         this.authToken = token;
         this.user = user;
     };
+    AuthService.prototype.loadUser = function () {
+        var user = localStorage.getItem('user');
+        this.user = user;
+    };
     AuthService.prototype.loadToken = function () {
         var token = localStorage.getItem('id_token');
         this.authToken = token;

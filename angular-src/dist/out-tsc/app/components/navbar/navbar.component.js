@@ -18,6 +18,15 @@ var NavbarComponent = /** @class */ (function () {
         this.flashMessage = flashMessage;
     }
     NavbarComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        if (this.authService.loggedIn()) {
+            this.authService.getProfile().subscribe(function (profile) {
+                _this.user = profile.user;
+            }, function (err) {
+                console.log(err);
+                return false;
+            });
+        }
     };
     NavbarComponent.prototype.onLogoutClick = function () {
         this.authService.logout();
