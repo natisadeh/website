@@ -3,12 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="708fcef4-d9e0-4592-9a66-2210b932308b" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/dist/out-tsc/app/components/navbar/navbar.component.js" afterPath="$PROJECT_DIR$/angular-src/dist/out-tsc/app/components/navbar/navbar.component.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/dist/out-tsc/app/components/navbar/navbar.component.js.map" afterPath="$PROJECT_DIR$/angular-src/dist/out-tsc/app/components/navbar/navbar.component.js.map" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/dist/out-tsc/app/services/auth.service.js" afterPath="$PROJECT_DIR$/angular-src/dist/out-tsc/app/services/auth.service.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/dist/out-tsc/app/services/auth.service.js.map" afterPath="$PROJECT_DIR$/angular-src/dist/out-tsc/app/services/auth.service.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/components/navbar/navbar.component.html" afterPath="$PROJECT_DIR$/angular-src/src/app/components/navbar/navbar.component.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/components/navbar/navbar.component.ts" afterPath="$PROJECT_DIR$/angular-src/src/app/components/navbar/navbar.component.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/angular-src/src/app/services/auth.service.ts" afterPath="$PROJECT_DIR$/angular-src/src/app/services/auth.service.ts" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -26,8 +22,8 @@
       <file leaf-file-name="auth.service.ts" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/angular-src/src/app/services/auth.service.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="833">
-              <caret line="49" column="3" lean-forward="true" selection-start-line="49" selection-start-column="3" selection-end-line="49" selection-end-column="3" />
+            <state relative-caret-position="357">
+              <caret line="21" column="32" lean-forward="true" selection-start-line="21" selection-start-column="32" selection-end-line="21" selection-end-column="32" />
               <folding>
                 <element signature="e#0#43#0" expanded="true" />
               </folding>
@@ -171,8 +167,8 @@
         <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/angular-src/src/app/components/navbar/navbar.component.html" />
         <option value="$PROJECT_DIR$/angular-src/src/app/components/profile/profile.component.html" />
-        <option value="$PROJECT_DIR$/angular-src/src/app/services/auth.service.ts" />
         <option value="$PROJECT_DIR$/angular-src/src/app/components/navbar/navbar.component.ts" />
+        <option value="$PROJECT_DIR$/angular-src/src/app/services/auth.service.ts" />
       </list>
     </option>
   </component>
@@ -352,7 +348,7 @@
       <updated>1510604090154</updated>
       <workItem from="1510604091536" duration="14872000" />
       <workItem from="1510783670257" duration="35059000" />
-      <workItem from="1510936194726" duration="42958000" />
+      <workItem from="1510936194726" duration="43975000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1510935050463</created>
@@ -382,11 +378,18 @@
       <option name="project" value="LOCAL" />
       <updated>1511202515070</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Welcome message in navbar with username display, a smarter way to display name by load directly from the localStorage and can be used in any components that needed">
+      <created>1511211195884</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1511211195884</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="92889000" />
+    <option name="totallyTimeSpent" value="93906000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -436,7 +439,9 @@
     <MESSAGE value="test commit in webstorm" />
     <MESSAGE value="Check if a user with that email is already registered" />
     <MESSAGE value="Welcome message in navbar with username display" />
-    <option name="LAST_COMMIT_MESSAGE" value="Welcome message in navbar with username display" />
+    <MESSAGE value="Welcome message in navbar with username display, a smarter way to display name by load directly from the localStorage and can be used in any components that needed" />
+    <MESSAGE value="syntax fixed" />
+    <option name="LAST_COMMIT_MESSAGE" value="syntax fixed" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -864,8 +869,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/angular-src/src/app/services/auth.service.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="833">
-          <caret line="49" column="3" lean-forward="true" selection-start-line="49" selection-start-column="3" selection-end-line="49" selection-end-column="3" />
+        <state relative-caret-position="357">
+          <caret line="21" column="32" lean-forward="true" selection-start-line="21" selection-start-column="32" selection-end-line="21" selection-end-column="32" />
           <folding>
             <element signature="e#0#43#0" expanded="true" />
           </folding>

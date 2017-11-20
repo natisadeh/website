@@ -20,7 +20,7 @@ var AuthService = /** @class */ (function () {
         var headers = new Headers();
         headers.append('Content-Type', 'application/json');
         return this.http.post('http://localhost:3000/users/register', user, { headers: headers })
-            .map(function (res) { return res.json().lo; });
+            .map(function (res) { return res.json(); });
     };
     AuthService.prototype.authenticateUser = function (user) {
         var headers = new Headers();
