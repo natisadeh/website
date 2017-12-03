@@ -10,7 +10,6 @@ import {Router} from "@angular/router";
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent implements OnInit {
-
   name: String;
   username: String;
   email: String;
@@ -32,7 +31,7 @@ export class RegisterComponent implements OnInit {
       email: this.email,
       username: this.username,
       password: this.password
-    }
+    };
 
     // Required Fields
     if(!this.validateService.validateRegister(user)){

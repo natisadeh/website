@@ -12,22 +12,12 @@ import { AuthService } from '../../services/auth.service';
 import { Router } from '@angular/router';
 import { FlashMessagesService } from 'angular2-flash-messages';
 var NavbarComponent = /** @class */ (function () {
-    // user:Object;
     function NavbarComponent(authService, router, flashMessage) {
         this.authService = authService;
         this.router = router;
         this.flashMessage = flashMessage;
     }
     NavbarComponent.prototype.ngOnInit = function () {
-        // if(this.authService.loggedIn()){
-        //   this.authService.getProfile().subscribe(profile => {
-        //       this.user = profile.user;
-        //     },
-        //     err => {
-        //       console.log(err);
-        //       return false;
-        //     });
-        // }
     };
     NavbarComponent.prototype.onLogoutClick = function () {
         this.authService.logout();

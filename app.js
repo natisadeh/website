@@ -6,6 +6,9 @@ const passport = require('passport');
 const mongoose = require('mongoose');
 const config = require('./config/database');
 
+// Get Mongoose to use the global promise library
+mongoose.Promise = global.Promise;
+
 // Connect To Database
 mongoose.connect(config.database, {useMongoClient: true});
 
@@ -22,6 +25,7 @@ mongoose.connection.on('error', (err) => {
 const app = express();
 
 const users = require('./routes/users');
+const properties = require('./routes/properites');
 
 const port = 3000;
 
@@ -41,15 +45,16 @@ app.use(passport.session());
 require('./config/passport')(passport);
 
 app.use('/users', users);
+app.use('/properties', properties);
 
 // Index Route
 app.get('/', (req, res) => {
     res.send('Invalid Endpoint');
 });
 
-app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public/index.html'));
-});
+// app.get('*', (req, res) => {
+//     res.sendFile(path.join(__dirname, 'public/index.html'));
+// });
 
 // Start Server
 app.listen(port, ()  => {
