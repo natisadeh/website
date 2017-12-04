@@ -11,6 +11,13 @@ export class AuthService {
 
   constructor(private http:Http) { }
 
+  addAsset(asset){
+    let headers = new Headers();
+    headers.append('Content-Type','application/json');
+    return this.http.post('properties/property', asset,{headers: headers})
+      .map(res => res.json());
+  }
+
   registerUser(user){
     let headers = new Headers();
     headers.append('Content-Type','application/json');

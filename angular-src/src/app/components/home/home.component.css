@@ -6,8 +6,8 @@
   text-align: left;
   font: bold 16px sans-serif;
 
-  padding: 55px 50px;
-  margin-top: 80px;
+  padding: 30px 30px;
+  margin-top: 400px;
 }
 
 .footer-distributed .footer-left,
@@ -121,6 +121,7 @@
   font-size: 14px;
   font-weight: bold;
   margin-bottom: 20px;
+
 }
 
 .footer-distributed .footer-icons{

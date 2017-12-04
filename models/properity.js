@@ -20,7 +20,7 @@ const PropSchema = mongoose.Schema({
         required: true
     },
     partners: {
-        type: Boolean,
+        type: String,
         required: true
     },
     homeCondition: {

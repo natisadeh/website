@@ -16,6 +16,12 @@ var AuthService = /** @class */ (function () {
         this.http = http;
         this.NAME_KEY = 'name';
     }
+    AuthService.prototype.addAsset = function (asset) {
+        var headers = new Headers();
+        headers.append('Content-Type', 'application/json');
+        return this.http.post('properties/property', asset, { headers: headers })
+            .map(function (res) { return res.json(); });
+    };
     AuthService.prototype.registerUser = function (user) {
         var headers = new Headers();
         headers.append('Content-Type', 'application/json');
