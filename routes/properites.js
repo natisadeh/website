@@ -92,7 +92,7 @@ router.delete('/property/:id', function(req, res, next){
 });
 
 // Update Property
-router.put('/task/:id', function(req, res, next){
+router.put('/property/:id', function(req, res, next){
     const prop = req.body;
     const updProp = {};
 

@@ -19,6 +19,7 @@ import { ProfileComponent } from './components/profile/profile.component';
 import { AssetsComponent } from './components/assets/assets.component';
 import { ValidateService } from "./services/validate.service";
 import { AuthService } from "./services/auth.service";
+import { AssetsService } from "./services/assets.service";
 import { FlashMessagesModule } from "angular2-flash-messages";
 import { AuthGuard } from "./guards/auth.guard";
 import { LoggedInGuard } from "./guards/logged-in.guard";
@@ -26,7 +27,7 @@ var appRoutes = [
     { path: '', component: HomeComponent },
     { path: 'register', component: RegisterComponent, canActivate: [LoggedInGuard] },
     { path: 'login', component: LoginComponent, canActivate: [LoggedInGuard] },
-    { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard] },
+    { path: 'dashboard', component: DashboardComponent },
     { path: 'profile', component: ProfileComponent, canActivate: [AuthGuard] },
     { path: 'assets', component: AssetsComponent }
 ];
@@ -52,7 +53,7 @@ var AppModule = /** @class */ (function () {
                 RouterModule.forRoot(appRoutes),
                 FlashMessagesModule
             ],
-            providers: [ValidateService, AuthService, AuthGuard, LoggedInGuard],
+            providers: [ValidateService, AuthService, AssetsService, AuthGuard, LoggedInGuard],
             bootstrap: [AppComponent]
         })
     ], AppModule);
