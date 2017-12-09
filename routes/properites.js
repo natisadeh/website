@@ -7,6 +7,7 @@ const db = mongojs('mongodb://nati:123@ds129706.mlab.com:29706/meanauthapp');
 
 router.post('/property', (req,res,next) =>{
     let newProp = new Prop({
+        area: req.body.area,
         address: req.body.address,
         squareMeter: req.body.squareMeter,
         monthlyRent: req.body.monthlyRent,
@@ -95,6 +96,10 @@ router.delete('/property/:id', function(req, res, next){
 router.put('/property/:id', function(req, res, next){
     const prop = req.body;
     const updProp = {};
+
+    if(prop.area){
+        updProp.area = prop.area;
+    }
 
     if(prop.address){
         updProp.address = prop.address;

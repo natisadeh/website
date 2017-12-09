@@ -3,64 +3,68 @@ const config = require('../config/database');
 
 // Prop Schema
 const PropSchema = mongoose.Schema({
-    address: {
+    area: { //Should be a scroll bar - 1. Tzafon yashan 2. Center 3. Lev 4. Kerem 5. Neve Tzedek 6. Florentin 7, Jaffa-north (Can choose only one)
         type: String,
         required: true
     },
-    squareMeter: {
+    address: { //insert full address like (Jabotinsky 133, Tel-Aviv)
         type: String,
         required: true
     },
-    monthlyRent: {
+    squareMeter: { //insert square meter of the house
         type: String,
         required: true
     },
-    rooms: {
+    monthlyRent: { // insert monthly rent by ILS
         type: String,
         required: true
     },
-    partners: {
+    rooms: { // insert number of rooms
         type: String,
         required: true
     },
-    homeCondition: {
+    partners: { // checkbox if the property is suitable for partners
+        type: Boolean,
+        required: true
+    },
+    homeCondition: {  //scroll bar with 4 parameters - Renovation needed/well-kept/renovated/new (can choose only one)
         type: String,
         required: true
     },
-    homeDesign: {
+    homeDesign: { //scroll bar with 4 parameters - Balcony / roof / garden (can choose only one)
         type: String,
         required: true
     },
-    floor: {
+    floor: { // option to insert floors
         type: String,
         required: true
     },
-    animals: {
-        type: String,
+    animals: { //checkbox
+        type: Boolean,
         required: true
     },
-    elevator: {
-        type: String,
+    elevator: { //checkbox
+        type: Boolean,
         required: true
     },
-    parking: {
-        type: String,
+    parking: { //checkbox
+        type: Boolean,
         required: true
     },
-    garage: {
-        type: String,
+    garage: { //checkbox
+        type: Boolean,
         required: true
     },
-    grate: {
-        type: String,
+    grate: { //checkbox
+        type: Boolean,
         required: true
     },
-    airCon: {
-        type: String,
+    airCon: { //checkbox
+        type: Boolean,
         required: true
     },
-    cripple: {
-        type: String,
+    cripple: { //checkbox
+        type: Boolean,
         required: true
     }
 });
