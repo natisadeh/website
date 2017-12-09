@@ -14,21 +14,22 @@ import {Asset} from "../../../Asset";
 })
 
 export class AssetsComponent implements OnInit {
+  area: string;
   address: string;
   squareMeter: string;
   monthlyRent: string;
   rooms: string;
-  partners: string;
+  partners: boolean;
   homeCondition: string;
   homeDesign: string;
   floor: string;
-  animals: string;
-  elevator: string;
-  parking: string;
-  garage: string;
-  grate: string;
-  airCon: string;
-  cripple: string;
+  animals: boolean;
+  elevator: boolean;
+  parking: boolean;
+  garage: boolean;
+  grate: boolean;
+  airCon: boolean;
+  cripple: boolean;
   assets: Asset[];
 
   constructor(
@@ -47,6 +48,7 @@ export class AssetsComponent implements OnInit {
 
   onAssetSubmit(){
     const asset = {
+      area: this.address,
       address: this.address,
       squareMeter: this.squareMeter,
       monthlyRent: this.monthlyRent,

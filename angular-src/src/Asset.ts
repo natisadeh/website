@@ -1,5 +1,6 @@
 export class Asset{
   _id: object;
+  area: string;
   address: string;
   squareMeter: string;
   monthlyRent: string;
